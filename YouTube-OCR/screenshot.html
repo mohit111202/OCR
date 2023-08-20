@@ -1,0 +1,57 @@
+<html>
+<script src='https://cdn.jsdelivr.net/gh/naptha/tesseract.js@v1.0.14/dist/tesseract.min.js'></script>
+<script src="modules/Imagely.js"></script>
+
+<script src="modules/Slider.js"></script>
+<script src="screenshot.js"></script>
+<link rel="stylesheet" type="text/css" href="screenshot.css">
+<body>
+	<div class="instructions">
+		<h1 id="select-instructions">Draw a rectangle around the code you'd like to copy, then hit ENTER</h1>
+    <h1 id="setting-instructions">Adjust the image with the Settings on the right, to get the text to be black text on white Background for better results and click on Apply OCR</h1>
+	</div>
+   
+   <canvas id="canvas" height="200" width="200"></canvas>
+
+  <div class="loader loader--style3" title="2" id="load">
+      <h2> Just a moment ...</h2>
+      <p>This might take a while</p>
+      <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         width="100px" height="100px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+      <path fill="#025ced" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+        <animateTransform attributeType="xml"
+          attributeName="transform"
+          type="rotate"
+          from="0 25 25"
+          to="360 25 25"
+          dur="0.6s"
+          repeatCount="indefinite"/>
+        </path>
+      </svg>
+    </div>
+
+  <div class="image-settings" id="image-settings">
+
+        <div class="setting-container">  
+            <div class="setting-button-choose"  id="thresholdButton">
+              Threshold
+            </div>
+        </div>
+
+        <div class="setting-container">
+            <div class="setting-button-choose"  id="invertButton">
+              Invert
+            </div>
+        </div>
+
+        <div class="setting-container">
+            <div class="submit-image-button" id="analyseButton">
+              Apply OCR
+            </div>
+        </div>
+
+  </div>
+
+        
+  </body>
+</html>

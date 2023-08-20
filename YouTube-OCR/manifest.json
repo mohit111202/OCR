@@ -1,0 +1,23 @@
+{
+
+  "name": "YouTubeOCR",
+  "version": "1",
+  "description": "Copy text from videos and images in the browser",
+  "background": {
+    "persistent": false,
+    "permissions": ["*://*.youtube.com/*"],
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_icon": "icon2.png",
+    "default_title": "Will copy code from cropped photo"
+  },
+  "permissions": [
+    "activeTab",
+    "windows",
+    "clipboardWrite",
+    "clipboardRead"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://cdn.jsdelivr.net/gh/naptha/tesseract.js@v1.0.14/dist/tesseract.min.js https://cdn.jsdelivr.net/gh/naptha/tesseract.js@1.0.13/dist/worker.js https://cdn.jsdelivr.net/gh/naptha/tesseract.js-core@0.1.0/index.js; object-src 'self'",
+  "manifest_version": 2
+}
